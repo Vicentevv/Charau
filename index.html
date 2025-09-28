@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charau - Loja</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* Las variables de color usadas en el HTML se han definido aquí 
+       para que Tailwind las reconozca, aunque los estilos más complejos
+       están en styles.css.
+    */
+    /* Definición de colores custom para Tailwind */
+    .bg-f5f5dc { background-color: #f5f5dc; }
+    .text-f5f5dc { color: #f5f5dc; }
+    .text-282828 { color: #282828; }
+    .bg-4a4a4a { background-color: #4a4a4a; }
+    .text-f0e68c { color: #f0e68c; }
+    .text-dbaf40 { color: #dbaf40; }
+    /* Estilo para la rotación suave de la flecha */
+    .rotate-180 {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="relative z-10 text-center px-4">
+         <h1 class="text-6xl md:text-8xl font-bold drop-shadow-lg leading-tight italic">Charau</h1>
+          <p style="font: oblique bold 120% cursive;">Experiencia culinaria con sabor auténtico Lojano</p>  
+          
+          <div class="mt-16 animate-bounce">
+            <svg class="w-10 h-10 mx-auto text-f5f5dc" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-6 md:px-12 bg-f5f5dc">
+        <h2 class="text-4xl font-bold text-center mb-10 text-282828">Nuestros Sabores</h2>
+        
+        <div id="galeriaPlatos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <div class="platos-grupo contents">
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/SanduchePhiladelphia1.jpg" alt="SanduchePhiladelphia1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/SanduchePhiladelphia2.jpg" alt="SanduchePhiladelphia2">
+                </div>
+                <div class="instagram-base-container instagram-img-vertical"> 
+                    <img src="img/SanduchePhiladelphia3.jpg" alt="SanduchePhiladelphia3">
+                </div>
+            </div>
+
+            <div class="platos-grupo contents hidden">
+                <div class="instagram-base-container instagram-img-vertical">
+                    <img src="img/EmpanadaPlatanoMaduro1.jpg" alt="EmpanadaPlatanoMaduro1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/EmpanadaPlatanoMaduro2.jpg" alt="EmpanadaPlatanoMaduro2">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/EmpanadaPlatanoMaduro3.jpg" alt="EmpanadaPlatanoMaduro3">
+                </div>
+            </div>
+
+            <div class="platos-grupo contents hidden">
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/SangoLojano1.jpg" alt="SangoLojano1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/SangoLojano2.jpg" alt="SangoLojano2">
+                </div>
+                <div class="instagram-base-container instagram-img-vertical"> 
+                    <img src="img/SangoLojano3.jpg" alt="SangoLojano3">
+                </div>
+            </div>
+
+
+            <div class="platos-grupo contents hidden">
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/moteCharau1.jpg" alt="moteCharau1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/moteCharau2.jpg" alt="moteCharau2">
+                </div>
+                <div class="instagram-base-container instagram-img-vertical"> 
+                    <img src="img/moteCharau3.jpg" alt="moteCharau3">
+                </div>
+            </div>
+
+            <div class="platos-grupo contents hidden">
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/moteSucio1.jpg" alt="moteSucio1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/moteSucio2.jpg" alt="moteSucio2">
+                </div>
+                <div class="instagram-base-container instagram-img-vertical"> 
+                    <img src="img/moteSucio3.jpg" alt="moteSucio3">
+                </div>
+            </div>
+
+            <div class="platos-grupo contents hidden">
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/molloco1.jpg" alt="molloco1">
+                </div>
+                <div class="instagram-base-container instagram-img-container">
+                    <img src="img/molloco2.jpg" alt="molloco2">
+                </div>
+                <div class="instagram-base-container instagram-img-vertical"> 
+                    <img src="img/molloco3.jpg" alt="molloco3">
+                </div>
+            </div>
+
+            </div>
+        <div class="text-center mt-12">
+            <button id="btnVerMas" class="inline-flex flex-col items-center group focus:outline-none">
+                
+                <span id="btnTexto" class="text-lg font-semibold text-282828 mb-1 group-hover:text-dbaf40 transition duration-300">
+                    Ver Más Platos
+                </span>
+
+                <div id="btnIconoDiv" class="animate-bounce">
+                    <svg class="w-10 h-10 mx-auto text-dbaf40 group-hover:text-f0e68c transition duration-300" 
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-4a4a4a py-16 px-6 md:px-12 text-center text-f5f5dc">
+      <h2 class="text-4xl font-bold mb-6">Sobre Nosotros</h2>
+      <p class="max-w-2xl mx-auto text-lg text-f5f5dc">
+        Charau, un lugar acogedor para compartir entre amigos o con familia.
+        Ven y disfruta de un menu variado con platos típicos de Loja y delicias internacionales.
+      </p>
+    </section>
+
+    <section class="bg-gray-800 py-16 px-6 md:px-12 text-white">
+      <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold text-f0e68c special-events-title">
+              EVENTOS ESPECIALES
+          </h2>
+          <p class="mt-3 text-lg text-f5f5dc">
+              Celebra tus momentos más importantes con nosotros
+          </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-birthday-cake text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Cumpleaños</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Celebra tu día especial con nuestro ambiente único en Loja.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Decoración personalizada</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Menú especial para eventos</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Área privada disponible</li>
+              </ul>
+          </div>
+
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-ring text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Unión de parejas</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Un lugar perfecto para esa persona especial.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Mesa con Decoración</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Ambiente romántico</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Coordinación especial</li>
+              </ul>
+          </div>
+
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-handshake text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Reuniones Corporativas</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Espacios ideales para reuniones de trabajo en un ambiente profesional y acogedor.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Sala privada</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Menu a tu eleccion</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Ambiente sin distraciones</li>
+              </ul>
+          </div>
+
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-heart text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Aniversarios</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Celebra el amor y los momentos especiales con una cena romántica inolvidable.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Mesa romántica decorada</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Música ambiente</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Atención personalizada</li>
+              </ul>
+          </div>
+
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-graduation-cap text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Graduaciones</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Celebra el logro académico con familiares y amigos en nuestro restaurante.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Decoración festiva</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Menú familiar compartido</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Área para fotografías</li>
+              </ul>
+          </div>
+
+          <div class="event-card">
+              <div class="flex items-center mb-4 event-icon">
+                  <i class="fas fa-champagne-glasses text-3xl mr-3"></i>
+                  <h3 class="text-xl font-bold">Eventos Privados</h3>
+              </div>
+              <p class="text-f5f5dc mb-4 text-sm">Organiza tu evento soñado con nuestro servicio personalizado y exclusivo.</p>
+              <ul class="space-y-2 text-sm">
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Reserva exclusiva</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Menú personalizado</li>
+                  <li class="flex items-center"><i class="fas fa-check check-icon mr-2"></i>Servicio completo</li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="mt-12 text-center pt-8 border-t border-gray-700">
+          <h3 class="text-2xl font-bold text-f5f5dc mb-3">¿LISTO PARA IR A CHARAU?</h3>
+          <p class="text-sm text-gray-400 mb-6">Contáctanos para más información y reservas</p>
+          
+          <a href="https://wa.me/593995762732?text=Hola,%20estoy%20listo%20para%20ir%20a%20Charau"
+          class="mt-10 inline-flex items-center gap-3 vintage-button text-lg font-semibold">
+          <i class="fab fa-whatsapp text-xl"></i> 
+          Contáctanos por WhatsApp
+          </a>
+      </div>
+    </section>
+
+    <footer class="footer-section text-center py-8 px-6">
+      <div class="max-w-4xl mx-auto">
+          <div class="mb-4 space-y-2">
+              <p class="text-lg font-semibold">Charau - Loja, Ecuador</p>
+              
+              <p class="text-sm">
+                  <a href="https://maps.google.com/?cid=5905738902585010886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-dbaf40 social-icon">  
+                      📍 Dirección: Calle Macara entre Alonso de Mercadillo y Azuay
+                  </a>
+              </p>
+              
+              <p class="text-gray-400">🕒 Horario: Lunes a Sábado, 8:00 - 22:00</p>
+          </div>
+
+          <div class="flex justify-center space-x-6 text-2xl mb-6">
+              <a href="https://www.facebook.com/share/177PmoycXX/?mibextid=wwXIfr" class="text-gray-400 hover:text-dbaf40 social-icon" aria-label="Síguenos en Facebook">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/charaucafeteria/" class="text-gray-400 hover:text-dbaf40 social-icon" aria-label="Síguenos en Instagram">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/593995762732" class="text-gray-400 hover:text-dbaf40 social-icon" aria-label="Contáctanos por WhatsApp">
+                  <i class="fab fa-whatsapp"></i>
+              </a>
+          </div>
+
+          <p class="text-xs text-gray-500">&copy; 2025  Charau. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    
+    <a href="https://wa.me/593995762732?text=Hola,%20estoy%20listo%20para%20ir%20a%20Charau"
+       class="fixed bottom-6 right-6 whatsapp-float-button text-2xl">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionamos todos los grupos de platos (excepto el primero)
+        const grupos = document.querySelectorAll('.platos-grupo.hidden');
+        const btnVerMas = document.getElementById('btnVerMas');
+        const btnTexto = document.getElementById('btnTexto');
+        const btnIconoDiv = document.getElementById('btnIconoDiv');
+        
+        // El índice del próximo grupo a mostrar
+        let grupoActualIndex = 0;
+
+        // Función que oculta el botón si no quedan grupos
+        function actualizarBoton() {
+            if (grupoActualIndex >= grupos.length) {
+                btnVerMas.style.display = 'none'; // Oculta el botón
+            }
+        }
+
+        // Inicialmente verificamos si hay grupos ocultos
+        actualizarBoton();
+
+        btnVerMas.addEventListener('click', function() {
+            if (grupoActualIndex < grupos.length) {
+                // 1. Mostrar el siguiente grupo
+                const grupoAMostrar = grupos[grupoActualIndex];
+                grupoAMostrar.classList.remove('hidden');
+                
+                // 2. Avanzar al siguiente índice
+                grupoActualIndex++;
+                
+                // 3. Verificar si era el último grupo
+                if (grupoActualIndex >= grupos.length) {
+                    btnTexto.textContent = 'Ver Menos Platos';
+                    btnIconoDiv.classList.add('rotate-180');
+                    btnIconoDiv.classList.remove('animate-bounce');
+                }
+                
+                // 4. Mover la vista hacia el nuevo contenido (opcional)
+                grupoAMostrar.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+            } else {
+                // Lógica de "Ver Menos" (Ocultar todos los grupos y volver al inicio)
+                grupos.forEach(grupo => {
+                    grupo.classList.add('hidden');
+                });
+                grupoActualIndex = 0;
+                btnVerMas.style.display = 'inline-flex'; // Aseguramos que se muestre
+                btnTexto.textContent = 'Ver Más Platos';
+                btnIconoDiv.classList.remove('rotate-180');
+                btnIconoDiv.classList.add('animate-bounce');
+                
+                // Volver a hacer scroll al inicio de la sección (opcional)
+                document.getElementById('galeriaPlatos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+  </script>
+</body>
+</html>

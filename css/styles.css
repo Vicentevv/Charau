@@ -1,0 +1,137 @@
+/* Importación de Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Tailwind CSS - **NOTA IMPORTANTE: En un proyecto real, esto debe ser procesado con PostCSS/Webpack/Vite.** */
+/* Para el ejercicio, se incluye el CDN de Tailwind en el CSS para mantener todos los estilos aquí. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colores Clave */
+/* Negro: #282828 */
+/* Gris Oscuro: #4a4a4a */
+/* Beige Claro (Fondo): #f5f5dc */
+/* Amarillo Suave (Acento): #f0e68c */
+/* Dorado: #dbaf40 */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5dc; /* Beige claro */
+  color: #282828; /* Negro suave */
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+.hero-section {
+  /* La imagen de fondo se debe colocar en la misma carpeta o actualizar la ruta */
+  background-image: url('/img/fondo-charau3.jpg'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f8bd26; /* Color dorado para el texto del héroe, aunque en el HTML se usa text-dbaf40 */
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay oscuro */
+}
+.vintage-button {
+  background-color: #dbaf40; /* Dorado */
+  color: #282828; /* Negro suave */
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* Full rounded */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.vintage-button:hover {
+  background-color: #dbaf40; /* Mismo color dorado al hover (ajustar si se desea un cambio) */
+  transform: translateY(-2px);
+}
+.event-card {
+  background-color: #4a4a4a; /* Gris oscuro para las tarjetas */
+  color: #f5f5dc; /* Beige claro para el texto de las tarjetas */
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 1.5rem; /* p-6 */
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+}
+.event-icon {
+  color: #dbaf40; /* Dorado para los iconos de evento */
+}
+.check-icon {
+  color: #a2c11c; /* Un verde oliva sutil para los checks */
+}
+.footer-section {
+  background-color: #282828; /* Negro para el footer */
+  color: #f5f5dc; /* Beige claro para el texto del footer */
+}
+.social-icon:hover {
+  color: #f0e68c; /* Amarillo suave al hover */
+}
+.whatsapp-float-button {
+  background-color: #25d366; /* Verde original de WhatsApp */
+  color: white;
+  padding: 1rem;
+  border-radius: 9999px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.whatsapp-float-button:hover {
+  background-color: #1da851;
+  transform: scale(1.05);
+}
+
+/* --- Estilos para Imágenes de Galería estilo Instagram --- */
+
+/* Contenedor Base */
+.instagram-base-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem; /* rounded-xl */
+}
+.instagram-base-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que llene el contenedor sin distorsionar */
+}
+
+/* 1. Formato Cuadrado (1:1 - 1080px x 1080px) */
+.instagram-img-container {
+    /* Hereda estilos base */
+    padding-bottom: 100%; /* H/W = 1/1 = 100% */
+}
+
+/* 2. Formato Vertical (4:5 - 1080px x 1350px) */
+.instagram-img-vertical {
+    /* Hereda estilos base */
+    padding-bottom: 125%; /* H/W = 1350/1080 = 1.25 = 125% */
+}
+
+/* --- Nuevo estilo para la descripción --- */
+.descripcion-cursiva {
+  /* La propiedad 'font' anula las propiedades individuales de Tailwind */
+  font: oblique bold 120% cursive; 
+  
+  /* Puedes reintroducir los colores de tu tema si es necesario: */
+  color: #dbaf40; /* Color dorado que usaste en el hero */
+}
+
+/* Añade esta clase para la animación de giro */
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+/* -------------------------------------------------------- */

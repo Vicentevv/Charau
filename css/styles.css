@@ -24,7 +24,8 @@ h1, h2, h3 {
 }
 .hero-section {
   /* La imagen de fondo se debe colocar en la misma carpeta o actualizar la ruta */
-  background-image: url('../img/fondo-charau3.jpg');
+/* Dentro de styles.css, en la regla .hero-section */
+background-image: url('../img/fondo-charau3.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
